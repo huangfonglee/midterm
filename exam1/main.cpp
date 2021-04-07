@@ -123,20 +123,20 @@ int main(){
                   sample = (uint16_t)(59578 * i / num);
                   aout.write_u16(sample);
                   sample2[i] = VIN;
-                  wait_us(20000/frequency);
+                  wait_us(940);
             }
             for (int i = 0; i < peak; i++){
                   sample = (uint16_t)(59578);
                   aout.write_u16(sample);
                   sample2[i + num] = VIN;
-                  wait_us(20000/frequency);
+                  wait_us(940);
             }
             for (int i = 0; i < num; i++) {
                   sample = (uint16_t)(59578 * (num - i) / num);
                   aout.write_u16(sample);
                   sample2[i + num + peak] = VIN;
                   
-                  wait_us(20000/frequency);
+                  wait_us(940);
             }
             
             for (int i = 0; i < num; i++) {
@@ -144,20 +144,20 @@ int main(){
                   sample = (uint16_t)(59578 * i / num);
                   aout.write_u16(sample);
                   sample2[i + 2 * num + peak] = VIN;
-                  wait_us(20000/frequency);
+                  wait_us(940);
             }
             for (int i = 0; i < peak; i++){
                   sample = (uint16_t)(59578);
                   aout.write_u16(sample);
                   sample2[i + 3 * num + peak] = VIN;
-                  wait_us(20000/frequency);
+                  wait_us(940);
             }
             for (int i = 0; i < num; i++) {
                   sample = (uint16_t)(59578 * (num - i) / num);
                   aout.write_u16(sample);
                   sample2[i + 3 * num + 2 * peak] = VIN;
                   
-                  wait_us(20000/frequency);
+                  wait_us(940);
             }
       }
 
